@@ -18,9 +18,27 @@ var firebaseConfig = {
     var name = document.getElementById('name').value
     var age = document.getElementById('age').value
 
-    database.ref('name/' + name).set({
+    database.ref('newNode2/' + '1stNewNodename').child('newNode-child').child("users-child-child").set({
+      //database.ref('newNode/' + name).child('users-child').child(UID).child("users-child-childy").set({
       name: name,
       age: age
+      
+      
+        /*users: {
+          userid1: {
+            name: "somestring",
+            age: "somenum",
+            gender: "somestring"  
+          },          
+        },
+        foods: {
+          food1: {
+            name: "somename",
+            carbs: "somenum",
+            fat: "somepercent",
+            protein: "somepercent"            
+          },        
+      }*/
     })
   }
 
